@@ -1,0 +1,61 @@
+.logo-img {
+  height: 37px;
+  width: 170px;
+}
+.nav-option-item {
+  list-style-type: none;
+  font-size: 37px;
+  margin-left: 23px;
+}
+.profile-img {
+  height: 45px;
+}
+.icon {
+  color: #ffffff;
+}
+.theme-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.popup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancel-btn {
+  border: 1px solid #7e858e;
+  border-radius: 2px;
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  color: #7e858e;
+  font-size: 18px;
+  margin-right: 30px;
+  background-color: transparent;
+}
+.confirm-btn {
+  border: none;
+  border-radius: 2px;
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  color: #f9f9f9;
+  font-size: 18px;
+  background-color: #4f46e5;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 567px) {
+  .profile-img {
+    height: 27px;
+  }
+  .bulb-icon {
+    height: 27px;
+  }
+  .icon {
+    height: 27px;
+  }
+}
