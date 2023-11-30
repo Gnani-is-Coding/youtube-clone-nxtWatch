@@ -10,6 +10,7 @@ import './App.css'
 class App extends Component {
   state = {
     isDarkTheme: false,
+    activeOption: 1,
   }
 
   changeTheme = () => {
@@ -18,13 +19,29 @@ class App extends Component {
     }))
   }
 
+  changeActiveOption = id => {
+    this.setState({
+      activeOption: id,
+    })
+  }
+
   render() {
-    const {isDarkTheme} = this.state
+    const {isDarkTheme, activeOption} = this.state
     return (
-      <Context.Provider value={{isDarkTheme, changeTheme: this.changeTheme}}>
+      <Context.Provider
+        value={{
+          isDarkTheme,
+          activeOption,
+          changeTheme: this.changeTheme,
+          changeActiveOption: this.changeActiveOption,
+        }}
+      >
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/" component={Home} />
+          <Route path="/trending" component={Home} />
+          <Route path="/gaming" component={Home} />
+          <Route path="/saved-videos" component={Home} />
         </Switch>
       </Context.Provider>
     )

@@ -42,12 +42,25 @@ class Header extends Component {
               <NavOptionsContainerSmall>
                 <ListItem color={isDarkTheme}>
                   {isDarkTheme ? (
-                    <HiOutlineLightBulb
-                      className="icon"
+                    <button
+                      data-testid="theme"
                       onClick={onClickChangeTheme}
-                    />
+                      alt="theme-button"
+                      className="theme-button"
+                      type="button"
+                    >
+                      <HiOutlineLightBulb className="icon" />
+                    </button>
                   ) : (
-                    <FaLightbulb onClick={onClickChangeTheme} />
+                    <button
+                      data-testid="theme"
+                      onClick={onClickChangeTheme}
+                      alt="theme-button"
+                      className="theme-button"
+                      type="button"
+                    >
+                      <FaLightbulb className="light-icons" />
+                    </button>
                   )}
                 </ListItem>
                 <ListItem color={isDarkTheme}>

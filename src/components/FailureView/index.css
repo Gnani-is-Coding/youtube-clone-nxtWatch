@@ -1,0 +1,39 @@
+.failure-view-container {
+  background-color: transparent;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+.failure-img {
+  height: 150px;
+}
+.retry-btn {
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 5px;
+  color: #f9f9f9;
+  font-weight: bold;
+  height: 30px;
+  width: 100px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.para {
+  color: #616e7c;
+  font-weight: bold;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 0px;
+  text-align: center;
+  max-width: 470px;
+}
+@media screen and (min-width: 768px) {
+  .failure-view-container {
+    height: 40vh;
+  }
+}

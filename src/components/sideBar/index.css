@@ -1,0 +1,23 @@
+.sidebar-options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0px;
+  text-decoration: none;
+}
+.option-link {
+  text-decoration: none;
+}
+.active-option {
+  background-color: #f1f5f9;
+  font-weight: bolder;
+  padding-left: 0px;
+}
+.logo-icon {
+  height: 30px;
+}
+.contact-logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}

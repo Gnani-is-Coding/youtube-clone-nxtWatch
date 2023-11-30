@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
-  background-color: ${props => (props.bgColor ? '#181818' : '#f9f9f9')};
+  background-color: ${props => (props.bgColor ? '#212121' : '#f9f9f9')};
   height: 10vh;
   display: flex;
   padding: 20px;
@@ -43,8 +43,8 @@ export const LogoutBtn = styled.button`
 `
 export const ListItem = styled.li`
   list-style-type: none;
-  font-size: 37px;
-  margin-left: 23px;
+  font-size: 30px;
+  margin-left: 18px;
   color: ${props => (props.color ? '#ffffff' : '')};
 `
 export const PopupContainer = styled.div`

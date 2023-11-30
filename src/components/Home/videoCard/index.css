@@ -1,0 +1,47 @@
+.video-card-container {
+  list-style-type: none;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+.thumbnail-img {
+  width: 100%;
+  align-self: flex-start;
+}
+.channel-img {
+  height: 40px;
+}
+.channel-description-container {
+  display: flex;
+  align-items: center;
+}
+.channel-description {
+  padding: 10px;
+}
+.channel-para {
+  color: #64748b;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.channel-para-container {
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .video-card-container {
+    max-width: 270px;
+    margin: 15px;
+  }
+  .channel-para {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .video-card-container {
+    max-width: 275px;
+    margin: 10px;
+  }
+}
