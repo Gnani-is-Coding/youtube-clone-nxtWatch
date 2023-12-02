@@ -58,7 +58,7 @@
 .video-cards-container {
   margin-left: -30px;
   overflow: auto;
-  height: 65vh;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 }

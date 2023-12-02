@@ -3,9 +3,8 @@
   max-width: 500px;
   margin-bottom: 15px;
 }
-.thumbnail-img {
-  width: 100%;
-  align-self: flex-start;
+.home-thumbnail-img {
+  height: 250px;
 }
 .channel-img {
   height: 40px;
@@ -17,31 +16,39 @@
 .channel-description {
   padding: 10px;
 }
-.channel-para {
+.home-vid-channel-para {
   color: #64748b;
   margin: 10px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 .channel-para-container {
   margin-top: -20px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 300px;
+  width: 260px;
 }
 
-@media screen and (min-width: 577px) and (max-width: 767px) {
+@media screen and (min-width: 578px) and (max-width: 767px) {
   .video-card-container {
-    max-width: 270px;
+    width: 285px;
     margin: 15px;
   }
-  .channel-para {
-    font-size: 16px;
+  .home-thumbnail-img {
+    width: 100%;
+    height: 180px;
+  }
+  .channel-para-container {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .video-card-container {
-    max-width: 275px;
+    max-width: 300px;
     margin: 10px;
+  }
+  .home-thumbnail-img {
+    width: 100%;
+    height: 160px;
   }
 }

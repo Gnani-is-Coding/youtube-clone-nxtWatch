@@ -22,7 +22,7 @@ const VideoCard = props => {
             <img
               src={thumbnailUrl}
               alt="video thumbnail"
-              className="thumbnail-img"
+              className="home-thumbnail-img"
             />
             <div className="channel-description-container">
               <img
@@ -33,9 +33,9 @@ const VideoCard = props => {
               <div className="channel-description">
                 <ChannelPara color={isDarkTheme}>{title}</ChannelPara>
                 <div className="channel-para-container">
-                  <p className="channel-para">{name}</p>
-                  <p className="channel-para">{viewCount}</p>
-                  <p className="channel-para">{publishedToNow}</p>
+                  <p className="home-vid-channel-para">{name}</p>
+                  <p className="home-vid-channel-para">{viewCount}</p>
+                  <p className="home-vid-channel-para">{publishedToNow}</p>
                 </div>
               </div>
             </div>
