@@ -4,6 +4,7 @@ import {MdExitToApp} from 'react-icons/md'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {HiOutlineLightBulb} from 'react-icons/hi'
 import Popup from 'reactjs-popup'
+import {Link} from 'react-router-dom'
 
 import './index.css'
 import Context from '../../Context'
@@ -30,15 +31,17 @@ class Header extends Component {
           }
           return (
             <NavContainer bgColor={isDarkTheme}>
-              <img
-                src={
-                  isDarkTheme
-                    ? `https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png`
-                    : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
-                }
-                className="logo-img"
-                alt="logo"
-              />
+              <Link to="/">
+                <img
+                  src={
+                    isDarkTheme
+                      ? `https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png`
+                      : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
+                  }
+                  className="logo-img"
+                  alt="logo"
+                />
+              </Link>
               <NavOptionsContainerSmall>
                 <ListItem color={isDarkTheme}>
                   {isDarkTheme ? (

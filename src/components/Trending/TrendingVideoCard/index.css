@@ -1,0 +1,56 @@
+.trending-video-card-container {
+  list-style-type: none;
+  max-width: 460px;
+  margin-bottom: 15px;
+}
+.thumbnail-img {
+  width: 100%;
+  align-self: flex-start;
+}
+.channel-img {
+  height: 40px;
+}
+.trending-channel-description-container {
+  display: flex;
+  align-items: center;
+}
+.trending-channel-description {
+  padding: 10px;
+}
+.channel-para {
+  color: #64748b;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.trending-channel-para-container {
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 577px) {
+  .trending-video-card-container {
+    margin-bottom: 20px;
+    display: flex;
+    max-width: 767px;
+  }
+  .channel-para {
+    font-size: 16px;
+  }
+  .thumbnail-img {
+    width: 310px;
+  }
+  .trending-channel-description-container {
+    width: 100%;
+    align-self: flex-start;
+    margin-left: 15px;
+  }
+  .trending-channel-para-container {
+    margin-left: -10px;
+  }
+  .trending-channel-description {
+    margin-left: 10px;
+  }
+}

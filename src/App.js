@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 
 import Login from './components/Login'
 import Home from './components/Home'
+import Trending from './components/Trending'
 import Context from './Context'
 import './App.css'
 
@@ -37,11 +38,11 @@ class App extends Component {
         }}
       >
         <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/" component={Home} />
-          <Route path="/trending" component={Home} />
-          <Route path="/gaming" component={Home} />
-          <Route path="/saved-videos" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/trending" component={Trending} />
+          <Route exact path="/gaming" component={Home} />
+          <Route exact path="/saved-videos" component={Home} />
         </Switch>
       </Context.Provider>
     )
