@@ -4,7 +4,8 @@ import {MdExitToApp} from 'react-icons/md'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {HiOutlineLightBulb} from 'react-icons/hi'
 import Popup from 'reactjs-popup'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
+import Cookies from 'js-cookie'
 
 import './index.css'
 import Context from '../../Context'
@@ -20,6 +21,13 @@ import {
 
 class Header extends Component {
   state = {}
+
+  onClickLogout = () => {
+    const {history} = this.props
+    Cookies.remove('jwt_token')
+
+    return history.replace('/login')
+  }
 
   render() {
     return (
@@ -93,7 +101,11 @@ class Header extends Component {
                             Cancel
                           </button>
 
-                          <button type="button" className="confirm-btn ">
+                          <button
+                            type="button"
+                            className="confirm-btn"
+                            onClick={this.onClickLogout}
+                          >
                             Confirm
                           </button>
                         </div>
@@ -150,7 +162,11 @@ class Header extends Component {
                             Cancel
                           </button>
 
-                          <button type="button" className="confirm-btn ">
+                          <button
+                            type="button"
+                            className="confirm-btn"
+                            onClick={this.onClickLogout}
+                          >
                             Confirm
                           </button>
                         </div>
@@ -167,4 +183,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default withRouter(Header)

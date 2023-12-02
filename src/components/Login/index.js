@@ -134,6 +134,8 @@ class Login extends Component {
                 </button>
 
                 <p className="error-msg">{errorMsg}</p>
+                <p className="user-cred">Username: rahul</p>
+                <p className="user-cred">Password: rahul@2021</p>
               </Form>
             </LoginContainer>
           )

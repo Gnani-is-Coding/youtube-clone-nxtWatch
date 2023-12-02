@@ -1,0 +1,35 @@
+.gaming-section-container {
+  display: flex;
+  font-size: 20px;
+}
+.loader-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.game-card-container {
+  list-style-type: none;
+  line-height: 10px;
+  width: 230px;
+  margin-bottom: 20px;
+}
+.card-img {
+  height: 220px;
+  border-radius: 10px;
+}
+.game-card-para {
+  color: #475569;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .game-card-container {
+    width: 200px;
+  }
+}

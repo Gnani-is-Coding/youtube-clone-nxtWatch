@@ -17,7 +17,7 @@ import {
 const sidebarOptions = [
   {id: 1, displayText: 'Home', path: '/'},
   {id: 2, displayText: 'Trending', path: '/trending'},
-  {id: 3, displayText: 'Gaming', path: '/game'},
+  {id: 3, displayText: 'Gaming', path: '/gaming'},
   {id: 4, displayText: 'Saved Videos', path: '/savedVideos'},
 ]
 

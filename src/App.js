@@ -5,6 +5,8 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Trending from './components/Trending'
 import Context from './Context'
+import Gaming from './components/Gaming'
+import ProtectedRoute from './ProtectedRoute'
 import './App.css'
 
 // Replace your code here
@@ -38,11 +40,11 @@ class App extends Component {
         }}
       >
         <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/trending" component={Trending} />
-          <Route exact path="/gaming" component={Home} />
-          <Route exact path="/saved-videos" component={Home} />
+          <Route path="/login" component={Login} />
+          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/trending" component={Trending} />
+          <ProtectedRoute exact path="/gaming" component={Gaming} />
+          <ProtectedRoute exact path="/saved-videos" component={Home} />
         </Switch>
       </Context.Provider>
     )

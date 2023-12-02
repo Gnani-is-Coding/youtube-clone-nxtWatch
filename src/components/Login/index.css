@@ -37,3 +37,9 @@
   font-size: 12px;
   align-self: flex-start;
 }
+.user-cred {
+  color: #475569;
+  font-size: 12px;
+  align-self: flex-start;
+  margin-top: -10px;
+}
