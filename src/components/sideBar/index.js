@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import {IoHome} from 'react-icons/io5'
 import {FaFireAlt} from 'react-icons/fa'
 import {SiYoutubegaming} from 'react-icons/si'
@@ -43,22 +43,22 @@ const optionIconGenerator = id => {
 const SideBar = () => (
   <Context.Consumer>
     {value => {
-      const {isDarkTheme, changeActiveOption, activeOption} = value
-      const onclickOption = id => {
-        changeActiveOption(id)
+      const {isDarkTheme, changeActiveOption, currentPath} = value
+      const onclickOption = path => {
+        changeActiveOption(path)
       }
 
       return (
         <SideBarContainer bgColor={isDarkTheme}>
           <ul className="sidebar-options-container">
             {sidebarOptions.map(obj => {
-              const isActive = obj.id === activeOption
+              const isActive = obj.path === currentPath
               return (
                 <Link to={obj.path} className="option-link">
                   <OptionContainer
                     key={obj.id}
                     color={isDarkTheme}
-                    onClick={() => onclickOption(obj.id)}
+                    onClick={() => onclickOption(obj.path)}
                     className={isActive ? 'active-option' : ''}
                     isActiveOption={isActive}
                   >
@@ -101,4 +101,4 @@ const SideBar = () => (
   </Context.Consumer>
 )
 
-export default SideBar
+export default withRouter(SideBar)

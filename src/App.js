@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, withRouter} from 'react-router-dom'
 
 import Login from './components/Login'
 import Home from './components/Home'
@@ -7,13 +7,23 @@ import Trending from './components/Trending'
 import Context from './Context'
 import Gaming from './components/Gaming'
 import ProtectedRoute from './ProtectedRoute'
+import VideoDetailsSection from './components/VideoDetailsSection'
 import './App.css'
 
 // Replace your code here
 class App extends Component {
   state = {
     isDarkTheme: false,
-    activeOption: 1,
+    currentPath: '',
+    savedVideoDetails: [],
+  }
+
+  componentDidMount() {
+    const {location} = this.props
+    const {pathname} = location
+    this.setState({
+      currentPath: pathname,
+    })
   }
 
   changeTheme = () => {
@@ -22,19 +32,34 @@ class App extends Component {
     }))
   }
 
-  changeActiveOption = id => {
+  changeActiveOption = path => {
     this.setState({
-      activeOption: id,
+      currentPath: path,
     })
   }
 
+  addToSavedVideos = data => {
+    console.log(data)
+    this.setState(prevState => ({
+      savedVideoDetails: [...prevState.savedVideoDetails, data],
+    }))
+  }
+
   render() {
-    const {isDarkTheme, activeOption} = this.state
+    const {
+      isDarkTheme,
+      activeOption,
+      currentPath,
+      savedVideoDetails,
+    } = this.state
     return (
       <Context.Provider
         value={{
           isDarkTheme,
           activeOption,
+          currentPath,
+          savedVideoDetails,
+          addToSavedVideos: this.addToSavedVideos,
           changeTheme: this.changeTheme,
           changeActiveOption: this.changeActiveOption,
         }}
@@ -45,10 +70,15 @@ class App extends Component {
           <ProtectedRoute exact path="/trending" component={Trending} />
           <ProtectedRoute exact path="/gaming" component={Gaming} />
           <ProtectedRoute exact path="/saved-videos" component={Home} />
+          <ProtectedRoute
+            exact
+            path="/videos/:id"
+            component={VideoDetailsSection}
+          />
         </Switch>
       </Context.Provider>
     )
   }
 }
 
-export default App
+export default withRouter(App)
