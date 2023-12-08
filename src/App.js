@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Trending from './components/Trending'
 import Context from './Context'
 import Gaming from './components/Gaming'
+import SavedVideos from './components/SavedVideos'
 import ProtectedRoute from './ProtectedRoute'
 import VideoDetailsSection from './components/VideoDetailsSection'
 import './App.css'
@@ -15,7 +16,23 @@ class App extends Component {
   state = {
     isDarkTheme: false,
     currentPath: '',
-    savedVideoDetails: [],
+    savedVideoDetails: [
+      {
+        channel: {
+          name: 'iB Cricket',
+          profile_image_url:
+            'https://assets.ccbp.in/frontend/react-js/nxt-watch/ib-cricket-img.png',
+          subscriber_count: '4.13K',
+        },
+        id: '606f5b7b-9208-4eb2-a68c-1eb5faef4268',
+        publishedAt: 'Mar 14, 2019',
+        thumbnailUrl:
+          'https://assets.ccbp.in/frontend/react-js/nxt-watch/ibc-sol-2-img.png',
+        title:
+          'Yellow Strikers are Ready to Strike Big | Watch it on Viu | iB Cricket Super Over League',
+        viewCount: '2K',
+      },
+    ],
   }
 
   componentDidMount() {
@@ -32,7 +49,7 @@ class App extends Component {
     }))
   }
 
-  changeActiveOption = path => {
+  changeActivePathOption = path => {
     this.setState({
       currentPath: path,
     })
@@ -61,7 +78,7 @@ class App extends Component {
           savedVideoDetails,
           addToSavedVideos: this.addToSavedVideos,
           changeTheme: this.changeTheme,
-          changeActiveOption: this.changeActiveOption,
+          changeActivePathOption: this.changeActivePathOption,
         }}
       >
         <Switch>
@@ -69,7 +86,7 @@ class App extends Component {
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/trending" component={Trending} />
           <ProtectedRoute exact path="/gaming" component={Gaming} />
-          <ProtectedRoute exact path="/saved-videos" component={Home} />
+          <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
           <ProtectedRoute
             exact
             path="/videos/:id"

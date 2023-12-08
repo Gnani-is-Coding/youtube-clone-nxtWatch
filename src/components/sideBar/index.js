@@ -18,7 +18,7 @@ const sidebarOptions = [
   {id: 1, displayText: 'Home', path: '/'},
   {id: 2, displayText: 'Trending', path: '/trending'},
   {id: 3, displayText: 'Gaming', path: '/gaming'},
-  {id: 4, displayText: 'Saved Videos', path: '/savedVideos'},
+  {id: 4, displayText: 'Saved Videos', path: '/saved-videos'},
 ]
 
 const optionIconGenerator = id => {
@@ -43,9 +43,9 @@ const optionIconGenerator = id => {
 const SideBar = () => (
   <Context.Consumer>
     {value => {
-      const {isDarkTheme, changeActiveOption, currentPath} = value
+      const {isDarkTheme, changeActivePathOption, currentPath} = value
       const onclickOption = path => {
-        changeActiveOption(path)
+        changeActivePathOption(path)
       }
 
       return (

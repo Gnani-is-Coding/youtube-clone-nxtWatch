@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {SiYoutubegaming} from 'react-icons/si'
 import Loader from 'react-loader-spinner'
+import {Link} from 'react-router-dom'
 
 import Context from '../../Context'
 import Header from '../Header'
@@ -79,14 +80,16 @@ class Gaming extends Component {
             <ul className="game-cards-container">
               {gamesData.map(obj => (
                 <li className="game-card-container" key={obj.id}>
-                  <img
-                    src={obj.thumbnailUrl}
-                    className="card-img"
-                    alt="thumbnail"
-                  />
-                  <GameHeading color={isDarkTheme}>{obj.title}</GameHeading>
-                  <p className="game-card-para">{obj.viewCount} watching</p>
-                  <p className="game-card-para"> worldwide</p>
+                  <Link to={`/videos/${obj.id}`} className="game-card-link">
+                    <img
+                      src={obj.thumbnailUrl}
+                      className="card-img"
+                      alt="thumbnail"
+                    />
+                    <GameHeading color={isDarkTheme}>{obj.title}</GameHeading>
+                    <p className="game-card-para">{obj.viewCount} watching</p>
+                    <p className="game-card-para"> worldwide</p>
+                  </Link>
                 </li>
               ))}
             </ul>

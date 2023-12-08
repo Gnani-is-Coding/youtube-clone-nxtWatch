@@ -1,0 +1,26 @@
+.saved-videos-section-container {
+  display: flex;
+  font-size: 20px;
+}
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: -25px;
+}
+.loader-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-saved-container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.no-saved-img {
+  height: 300px;
+}

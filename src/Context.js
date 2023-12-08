@@ -5,7 +5,7 @@ const Context = React.createContext({
   activeOption: 1,
   savedVideoDetails: [],
   changeTheme: () => {},
-  changeActiveOption: () => {},
+  changeActivePathOption: () => {},
   addToSavedVideos: () => {},
 })
 

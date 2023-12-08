@@ -21,9 +21,6 @@ import {
   DescriptionPara,
 } from './styledComponents'
 
-/*
-
-*/
 const controlObject = {
   loadingView: 'LOADING',
   failureView: 'FAILURE',

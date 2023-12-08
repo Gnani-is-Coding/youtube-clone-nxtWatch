@@ -143,7 +143,7 @@ class Header extends Component {
                     trigger={
                       <li className="nav-option-item">
                         <LogoutBtn type="button" bgColor={isDarkTheme}>
-                          Login
+                          Logout
                         </LogoutBtn>
                       </li>
                     }

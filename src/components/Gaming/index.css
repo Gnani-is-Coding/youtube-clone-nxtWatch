@@ -27,6 +27,9 @@
   color: #475569;
   font-size: 16px;
 }
+.game-card-link {
+  text-decoration: none;
+}
 
 @media screen and (min-width: 768px) {
   .game-card-container {
