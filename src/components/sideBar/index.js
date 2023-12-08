@@ -21,7 +21,7 @@ const sidebarOptions = [
   {id: 4, displayText: 'Saved Videos', path: '/saved-videos'},
 ]
 
-const optionIconGenerator = id => {
+export const optionIconGenerator = id => {
   switch (id) {
     case 1:
       return (
@@ -53,6 +53,7 @@ const SideBar = () => (
           <ul className="sidebar-options-container">
             {sidebarOptions.map(obj => {
               const isActive = obj.path === currentPath
+
               return (
                 <Link to={obj.path} className="option-link">
                   <OptionContainer

@@ -57,6 +57,7 @@ export const PopupContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 10px 0px #bfbfbf;
 `
 export const PopupPara = styled.p`
   color: ${props => (props.color ? '#ffffff' : '#181818')};
@@ -64,4 +65,21 @@ export const PopupPara = styled.p`
   margin-top: 10px;
   margin-bottom: 30px;
   font-weight: 500;
+`
+export const MenuPopupContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-right: 25px;
+`
+export const MenuCloseButton = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: ${props => (props.color ? '#f9f9f9' : '')};
+  font-size: 24px;
+  margin-left: auto;
+  margin-top: 20px;
+  cursor: pointer;
 `

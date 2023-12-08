@@ -16,23 +16,7 @@ class App extends Component {
   state = {
     isDarkTheme: false,
     currentPath: '',
-    savedVideoDetails: [
-      {
-        channel: {
-          name: 'iB Cricket',
-          profile_image_url:
-            'https://assets.ccbp.in/frontend/react-js/nxt-watch/ib-cricket-img.png',
-          subscriber_count: '4.13K',
-        },
-        id: '606f5b7b-9208-4eb2-a68c-1eb5faef4268',
-        publishedAt: 'Mar 14, 2019',
-        thumbnailUrl:
-          'https://assets.ccbp.in/frontend/react-js/nxt-watch/ibc-sol-2-img.png',
-        title:
-          'Yellow Strikers are Ready to Strike Big | Watch it on Viu | iB Cricket Super Over League',
-        viewCount: '2K',
-      },
-    ],
+    savedVideoDetails: [],
   }
 
   componentDidMount() {
