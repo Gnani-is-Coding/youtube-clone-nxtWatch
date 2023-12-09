@@ -17,7 +17,7 @@ export const NavContainer = styled.nav`
 export const NavOptionsContainerSmall = styled.ul`
   display: flex;
   align-items: center;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 577px) {
     display: none;
   }
 `
@@ -41,7 +41,7 @@ export const LogoutBtn = styled.button`
   border-radius: 5px;
   margin-bottom: 15px;
 `
-export const ListItem = styled.li`
+export const ListItem = styled.div`
   list-style-type: none;
   font-size: 30px;
   margin-left: 18px;

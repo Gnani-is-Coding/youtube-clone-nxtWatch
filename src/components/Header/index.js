@@ -79,29 +79,31 @@ const Header = props => {
             </Link>
 
             <NavOptionsContainerSmall>
-              <ListItem color={isDarkTheme}>
-                {isDarkTheme ? (
-                  <button
-                    data-testid="theme"
-                    onClick={onClickChangeTheme}
-                    alt="theme-button"
-                    className="theme-button"
-                    type="button"
-                  >
-                    <HiOutlineLightBulb className="icon" />
-                  </button>
-                ) : (
-                  <button
-                    data-testid="theme"
-                    onClick={onClickChangeTheme}
-                    alt="theme-button"
-                    className="theme-button"
-                    type="button"
-                  >
-                    <FaLightbulb className="light-icons" />
-                  </button>
-                )}
-              </ListItem>
+              <li className="small-bulb-icon-list">
+                <ListItem color={isDarkTheme}>
+                  {isDarkTheme ? (
+                    <button
+                      data-testid="theme"
+                      onClick={onClickChangeTheme}
+                      alt="theme-button"
+                      className="theme-button"
+                      type="button"
+                    >
+                      <HiOutlineLightBulb className="icon" />
+                    </button>
+                  ) : (
+                    <button
+                      data-testid="theme"
+                      onClick={onClickChangeTheme}
+                      alt="theme-button"
+                      className="theme-button"
+                      type="button"
+                    >
+                      <FaLightbulb className="light-icons" />
+                    </button>
+                  )}
+                </ListItem>
+              </li>
 
               <li className="small-menu-popup">
                 <Popup
@@ -211,15 +213,15 @@ const Header = props => {
                 />
               </li>
 
-              <div className="popup-container">
+              <li className="popup-container">
                 <Popup
                   modal
                   trigger={
-                    <li className="nav-option-item">
+                    <div className="nav-option-item">
                       <LogoutBtn type="button" bgColor={isDarkTheme}>
                         Logout
                       </LogoutBtn>
-                    </li>
+                    </div>
                   }
                 >
                   {close => (
@@ -247,7 +249,7 @@ const Header = props => {
                     </PopupContainer>
                   )}
                 </Popup>
-              </div>
+              </li>
             </NavContainerMedium>
           </NavContainer>
         )

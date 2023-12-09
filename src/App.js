@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Switch, Route, withRouter} from 'react-router-dom'
+import {Switch, Route, withRouter, Redirect} from 'react-router-dom'
 
 import Login from './components/Login'
 import Home from './components/Home'
@@ -8,6 +8,7 @@ import Context from './Context'
 import Gaming from './components/Gaming'
 import SavedVideos from './components/SavedVideos'
 import ProtectedRoute from './ProtectedRoute'
+import NotFound from './components/NotFound'
 import VideoDetailsSection from './components/VideoDetailsSection'
 import './App.css'
 
@@ -76,6 +77,8 @@ class App extends Component {
             path="/videos/:id"
             component={VideoDetailsSection}
           />
+          <ProtectedRoute exact path="/not-found" component={NotFound} />
+          <Redirect to="/not-found" />
         </Switch>
       </Context.Provider>
     )

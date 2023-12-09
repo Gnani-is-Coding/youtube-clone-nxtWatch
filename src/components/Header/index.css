@@ -67,6 +67,9 @@
 .option-link {
   text-decoration: none;
 }
+li {
+  list-style-type: none;
+}
 
 @media screen and (min-width: 567px) {
   .profile-img {
@@ -77,8 +80,5 @@
   }
   .icon {
     height: 27px;
-  }
-  .small-menu-popup {
-    display: none;
   }
 }

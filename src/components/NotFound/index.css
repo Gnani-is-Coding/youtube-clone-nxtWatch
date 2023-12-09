@@ -1,0 +1,19 @@
+.not-found-img {
+  height: 250px;
+}
+.not-found-description-container {
+  width: 300px;
+  text-align: center;
+}
+.not-found-sidebar-container {
+  display: flex;
+}
+
+@media screen and (min-width: 767px) {
+  .not-found-description-container {
+    width: 400px;
+  }
+  .not-found-img {
+    height: 300px;
+  }
+}
